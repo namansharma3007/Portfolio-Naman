@@ -51,7 +51,7 @@ const Contact = () => {
         duration: 2000,
       });
       setFormData({ name: "", email: "", message: "" });
-    } catch (_error) {
+    } catch (error) {
       toast({
         title: "Internal Server Error! 😢",
         description: "Please try again later.",
