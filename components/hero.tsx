@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
+const resume_link = "https://drive.google.com/file/d/1vSwYYBXEuQsE-q3xPdr-x3LVsTax7-QZ/view?usp=sharing";
+
 const Hero = () => {
   return (
     <section
@@ -27,7 +29,7 @@ const Hero = () => {
         </p>
         <Button className="bg-pink-400 hover:bg-pink-500 text-white font-bold py-3 px-6 rounded-lg md:text-xl text-lg transform transition-all duration-300 hover:translate-x-1 hover:translate-y-1 border-2 border-gray-800 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] hover:shadow-none">
           <a
-            href="https://drive.google.com/file/d/1vSwYYBXEuQsE-q3xPdr-x3LVsTax7-QZ/view?usp=sharing"
+            href={resume_link}
             target="_blank"
             className="flex items-center md:text-xl text-lg"
           >
