@@ -37,8 +37,13 @@ export async function POST(request: Request) {
       text: message,
     };
 
-    await transporter.sendMail(mailOptions);
-
+    const response = await transporter.sendMail(mailOptions);
+    if(!response.messageId){
+        return NextResponse.json(
+            { message: "Error sending message! 😢" },
+            { status: 400 }
+        );
+    }
     return NextResponse.json(
       { message: "Message sent successfully! 😊" },
       { status: 200 }
