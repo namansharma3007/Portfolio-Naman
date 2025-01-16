@@ -37,13 +37,14 @@ export async function POST(request: Request) {
       text: message,
     };
 
-    const response = await transporter.sendMail(mailOptions);
-    if(!response.messageId){
-        return NextResponse.json(
-            { message: "Error sending message! 😢" },
-            { status: 400 }
-        );
-    }
+    await transporter.sendMail(mailOptions).catch((error) => {
+      console.log("Error sending message:", error);
+      return NextResponse.json(
+        { messaage: "Internal server error! 😢" },
+        { status: 500 }
+      );
+    });
+    
     return NextResponse.json(
       { message: "Message sent successfully! 😊" },
       { status: 200 }
