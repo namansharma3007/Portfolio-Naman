@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Naman Sharma',
   description: 'Passionate software developer specializing in full-stack development, crafting scalable web applications, and leveraging modern technologies like JavaScript, React, Node.js, and cloud databases to deliver seamless user experiences.',
   icons: {
-    icon: "/icon.png",
+    icon: "/favicon.png",
   },
 }
 
