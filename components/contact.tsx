@@ -50,6 +50,7 @@ const Contact = () => {
         variant: "success",
         duration: 2000,
       });
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       toast({
         title: "Internal Server Error! 😢",
