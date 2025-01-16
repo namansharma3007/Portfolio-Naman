@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, Linkedin, Github, Twitter } from "lucide-react";
+import { Send, Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -16,7 +16,7 @@ const Contact = () => {
       transition={{ duration: 0.5 }}
     >
       <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">
-        Let's Connect!
+        Let&apos;s Connect!
       </h2>
       <form className="space-y-6 max-w-2xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

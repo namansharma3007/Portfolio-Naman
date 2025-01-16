@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
-import { TypeIcon as type, LucideIcon, User, Cpu, FileCode, Phone } from 'lucide-react'
+import { LucideIcon, User, Cpu, FileCode, Phone } from 'lucide-react'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
