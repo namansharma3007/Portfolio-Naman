@@ -48,7 +48,7 @@ const Contact = () => {
         <p className="text-xl lg:text-2xl font-bold mb-4">
           Or reach out directly:
         </p>
-        <p className="text-lg lg:text-xl">namansharma3007c@gmail.com</p>
+        <p className="text-lg lg:text-xl break-words">namansharma3007c@gmail.com</p> 
         <div className="mt-6 justify-center items-center flex flex-wrap gap-2">
           <Button className="bg-blue-400 hover:bg-blue-500 text-white transform transition-all duration-300 hover:translate-x-1 hover:translate-y-1 border-2 border-gray-800 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] hover:shadow-none">
             <Linkedin className="mr-2" />
