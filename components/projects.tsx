@@ -49,35 +49,38 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className={`${project.color} p-6 rounded-xl border-2 border-gray-800 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform transition-all duration-300 hover:translate-x-1 hover:translate-y-1 hover:shadow-none`}
+            className={`${project.color} p-6 rounded-xl border-2 border-gray-800 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform transition-all duration-300 hover:translate-x-1 hover:translate-y-1 hover:shadow-none flex flex-col justify-between`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <div className="flex items-center mb-4">
-              {project.icon}
-              <h3 className="text-2xl lg:text-3xl font-bold ml-2 text-gray-800">
-                {project.title}
-              </h3>
+            <div>
+              <div className="flex items-center mb-4">
+                {project.icon}
+                <h3 className="text-2xl lg:text-3xl font-bold ml-2 text-gray-800">
+                  {project.title}
+                </h3>
+              </div>
+              <p className="text-lg mb-4">{project.description}</p>
             </div>
-            <p className="text-lg mb-4">{project.description}</p>
-            <div className="mb-4">
-              {project.technologies.map((tech, techIndex) => (
-                <span
-                  key={techIndex}
-                  className="text-sm font-semibold bg-white px-2 py-1 rounded-full inline-block mr-2 mb-2 border-2 border-gray-800"
-                >
-                  {tech}
-                </span>
-              ))}
+
+            <div>
+              <div className="mb-4">
+                {project.technologies.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="text-sm font-semibold bg-white px-2 py-1 rounded-full inline-block mr-2 mb-2 border-2 border-gray-800"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <Button className="bg-indigo-400 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg transform transition-all duration-300 hover:translate-x-1 hover:translate-y-1 border-2 border-gray-800 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] hover:shadow-none">
+                <a href={project.link} target="_blank">
+                  Learn More
+                </a>
+              </Button>
             </div>
-            <Button
-              
-              className="bg-indigo-400 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg transform transition-all duration-300 hover:translate-x-1 hover:translate-y-1 border-2 border-gray-800 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] hover:shadow-none"
-            >
-              <a href={project.link}
-              target="_blank">Learn More</a>
-            </Button>
           </motion.div>
         ))}
       </div>
