@@ -2,10 +2,28 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { LaptopMinimal, CircleDollarSign } from "lucide-react";
+import { Vote, CircleDollarSign } from "lucide-react";
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Poll-Chain",
+      description:
+        "The next generation of decentralized polling powered by blockchain technology. Your voice matters and your vote is immutable.",
+      technologies: [
+        "Vite.js",
+        "Express.js",
+        "MongoDB",
+        "TailwindCSS",
+        "Hardhat",
+        "Ether.js",
+        "JsonWebToken (JWT)",
+        "Node.js",
+      ],
+      color: "bg-gradient-to-br from-cyan-300 to-cyan-400",
+      link: "https://github.com/namansharma3007/Poll-Chain-frontend",
+      icon: <Vote className="w-8 h-8" />,
+    },
     {
       title: "Equi-Share",
       description:
@@ -21,23 +39,7 @@ const Projects = () => {
       color: "bg-gradient-to-br from-orange-300 to-orange-400",
       link: "https://github.com/namansharma3007/Equi-share",
       icon: <CircleDollarSign className="w-8 h-8" />,
-    },
-    {
-      title: "Coding-IDE",
-      description:
-        "Platform for developers to write, run, debug code and save their work. It's a place where you can learn, experiment, and build your skills.",
-      technologies: [
-        "Vite.js",
-        "Express.js",
-        "PostgreSQL",
-        "TailwindCSS",
-        "Redis",
-        "Node.js",
-      ],
-      color: "bg-gradient-to-br from-cyan-300 to-cyan-400",
-      link: "https://github.com/namansharma3007/Coding-IDE",
-      icon: <LaptopMinimal className="w-8 h-8" />,
-    },
+    }
   ];
 
   return (
