@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
-const resume_link = "https://drive.google.com/file/d/1vSwYYBXEuQsE-q3xPdr-x3LVsTax7-QZ/view?usp=sharing";
+const resume_link = "https://drive.google.com/file/d/1OCqU368WsZDwhVgSlwkKphnOsgcawkFH/view?usp=sharing";
 
 const Hero = () => {
   return (
